@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.9.21)  6 DEC 2019 12:46
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.9.21)  6 DEC 2019 16:18
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -38,7 +38,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 Inserting `luaotfload.aux.set_xheight' at position 4 in `luaotfload.patch_font'.
 Lua module: luaotfload-multiscript 2019-09-13 3.00 luaotfload submodule / multiscript
 Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.181 seconds
+luaotfload | main : initialization completed in 0.159 seconds
 (./header.tex (/home/nico/.local/texlive/2019/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
 (/home/nico/.local/texlive/2019/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -1641,19 +1641,20 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
  [2
 
 ] (./content/ziel.tex) (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex
-<plot.pdf, id=56, 417.7206pt x 258.0049pt>
-File: plot.pdf Graphic file (type pdf)
-<use plot.pdf>
-Package luatex.def Info: plot.pdf  used on input line 6.
-(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+<content/ErsterTeil.jpg, id=56, 225.84375pt x 169.38281pt>
+File: content/ErsterTeil.jpg Graphic file (type jpg)
+<use content/ErsterTeil.jpg>
+Package luatex.def Info: content/ErsterTeil.jpg  used on input line 6.
+(luatex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+
+LaTeX Warning: Reference `fig:plot' on page 3 undefined on input line 12.
+
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 5.00053pt on input line 52.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 52.
-) (./content/diskussion.tex [3]
-Overfull \vbox (34.61404pt too high) has occurred while \output is active []
-
- [4<build/plot.pdf>]) (./content/anhang.tex)
+) (./content/diskussion.tex [3]) (./content/anhang.tex) [4<./content/ErsterTeil.jpg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
  [5]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
@@ -1661,28 +1662,32 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 26.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 74B613F3B0148FFE56BBB794FCD32878;12363.
+(rerunfilecheck)             Checksum: D1AB3B4E452D2774401F708900D46B60;12367.
 Package rerunfilecheck Info: File `main.toc' has not changed.
 (rerunfilecheck)             Checksum: 5A0327F112117C03E026ED44DAE438F0;1669.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 43826 strings out of 494291
+ 43828 strings out of 494291
  100000,1977958 words of node,token memory allocated
  708 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 22 attribute, 80 glue_spec, 13 attribute_list, 1 write, 4 pdf_action nodes
-   avail lists: 1:2,2:1531,3:136,4:18,5:122,6:33,7:2953,8:48,9:300,10:7,11:191
- 46866 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:1528,3:134,4:18,5:122,6:33,7:2924,8:48,9:299,10:7,11:189
+ 46867 multiletter control sequences out of 65536+600000
  162 fonts using 59731159 bytes
  57i,14n,109p,9101b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
 </home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/nico/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (5 pages, 61227 bytes).
+Output written on main.pdf (5 pages, 142966 bytes).
 
-PDF statistics: 222 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+PDF statistics: 203 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
  30 named destinations out of 1000 (max. 131072)
  129 words of extra memory for PDF output out of 10000 (max. 100000000)
 

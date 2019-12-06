@@ -336,8 +336,8 @@ INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
-INPUT build/plot.pdf
-INPUT build/plot.pdf
+INPUT ./content/ErsterTeil.jpg
+INPUT ./content/ErsterTeil.jpg
 INPUT /home/nico/.local/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/nico/.local/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
 INPUT /home/nico/.local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
