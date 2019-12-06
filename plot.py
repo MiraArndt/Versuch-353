@@ -1,21 +1,30 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import csv
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+x=np.genfromtxt("RCKreis.csv", delimiter=",",unpack=True,usecols=0)
+y=np.genfromtxt("RCKreis.csv", delimiter=",",unpack=True,usecols=1)
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
+params, covariance_matrix = np.polyfit(x, np.log(y), deg=1, cov=True)
+x_plot = np.linspace(0,3,100)
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
+print(params[1])
 
-# in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+print(params[0])
+
+
+plt.plot(
+   x_plot,
+    params[0] * x_plot + params[1],
+    label='Lineare Regression',
+    linewidth=3,
+)
+plt.plot(x,np.log(y),'r.', label = 'Messwerte')
+plt.xlabel(r'$t \,/\, \mathrm{ms}$')
+plt.ylabel(r'$ln\left(\frac{U_C}{U_0}\right)$')
+plt.legend()
+
+
+
+plt.tight_layout()
+plt.savefig('plot.pdf')
