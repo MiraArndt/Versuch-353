@@ -3,23 +3,32 @@ import numpy as np
 import csv
 from scipy.optimize import curve_fit
 
-
 x=np.genfromtxt("RCKreis2.csv", delimiter=",",unpack=True,usecols=1)
 y=np.genfromtxt("RCKreis2.csv", delimiter=",",unpack=True,usecols=0)
 
+#def exp(x, a, b):
+   # return np.exp(-a*x+b)
+#params, covariance_matrix = curve_fit(exp, x, y, p0=(-0.0002, 1))
 
-def sigmoid(x, a, b, c, d):
-    return a / (1 + np.exp(-(d*x - b))) + c
 
-params, covariance_matrix = curve_fit(sigmoid, x, y, p0=(-6, 1.6, 6, 0.1))
+def exp(x, a, b):
+    return a/(np.sqrt(1+(x/2*np.pi)**2*b**2))
+
+params, covariance_matrix = curve_fit(exp, x, y, p0=(1, 0.004))
+
+
 uncertainties = np.sqrt(np.diag(covariance_matrix))
-for name, value, uncertainty in zip('abcd', params, uncertainties): 
-    print(f'{name} = {value:8.3f} ± {uncertainty:.3f}')
+for name, value, uncertainty in zip('ab', params, uncertainties): 
+    print(f'{name} = {value:8.5f} ± {uncertainty:.5f}')
 
-x_plot = np.linspace(0,10000,10000)
+a = np.linspace(10,10000,10000)
 
+w = 1.40341
+f = w/(2*np.pi)
 
-plt.plot(x_plot, np.log(sigmoid(x_plot, *params)), "-", label='Sigmoid Fit')
+#(np.sqrt(1+(x_plot)^2*(1.40341)**2))**(-1)
+
+plt.plot(a, (np.sqrt(1+(f*a)**2))**(-1) , "-", label='A(\nu_i)/U_0')
 
 plt.legend(loc='best')
 
